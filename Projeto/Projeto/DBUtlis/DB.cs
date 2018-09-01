@@ -15,6 +15,7 @@ namespace Projeto.DBUtils
                 "Data Source=(local);Initial Catalog=BDVendaDireta;"
                 + "Integrated Security=true";
             connection = new SqlConnection(connectionString);
+            connection.Open();
             return connection;
         }
 

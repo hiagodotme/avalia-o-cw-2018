@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    <title>@ViewBag.Title - CW 2018</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -20,30 +20,57 @@
                 @Html.ActionLink("Avaliação CW 2018", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    @if (Session["Auth"] == null)
-                    {
+                @if (Session["Auth"] == null)
+                {
+                    <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Login", "Login", "Usuario")</li>
                         <li>@Html.ActionLink("Cadastro", "Cadastro", "Usuario")</li>
-                    }
-                    else
-                    {
-                        <li>@Html.ActionLink("Login", "Usuario", "Login")</li>
-                        <li>@Html.ActionLink("Cadastro", "Usuario", "Cadastro")</li>
-                    }
+                    </ul>
 
-                </ul>
+                }
+                else
+                {
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                @ViewBag.Usuario.Nome (<span>R$ @ViewBag.Usuario.Receita</span>) <span class="caret"></span>
+
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Usuario/Logout">Desconectar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                }
             </div>
         </div>
     </div>
     <div class="container body-content">
+        <!-- Exibindo erros genéricos -->
+        @if (ViewBag.Alerts != null && ViewBag.Alerts.Sucesso != null)
+        {
+            <div class="alert alert-success">
+                @ViewBag.Alerts.Sucesso
+            </div>
+        }
+        @if (ViewBag.Alerts != null && ViewBag.Alerts.Erro != null)
+        {
+            <div class="alert alert-danger">
+                @ViewBag.Alerts.Erro
+            </div>
+        }
+        @if (ViewBag.Alerts != null && ViewBag.Alerts.Informacao != null)
+        {
+            <div class="alert alert-info">
+                @ViewBag.Alerts.Informacao
+            </div>
+        }
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Hiago Silva Souza - CW 2018</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

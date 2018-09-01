@@ -10,7 +10,7 @@ namespace Projeto.Models
         public int ProdutoId { get; set; }
         public int UsuarioId { get; set; }
         public String Nome { get; set; }
-        public double Preco { get; set; }
+        public Decimal Preco { get; set; }
         public bool Vendido { get; set; }
     }
 }

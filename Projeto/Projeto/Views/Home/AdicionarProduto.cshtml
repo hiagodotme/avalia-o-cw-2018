@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "AdicionarProduto";
+}
+
+<h2>AdicionarProduto</h2>
+
+<form action="/Home/CriarNovoProduto" method="POST">
+    <div class="input-group">
+        <span class="input-group-addon">@@</span>
+        <input type="text" class="form-control" name="Nome" required placeholder="Nome do Produto" /><br />
+    </div>
+    <br/>
+    <div class="input-group">
+        <span class="input-group-addon">R$</span>
+        <input type="text"  class="form-control" name="Preco" required placeholder="Preço" /><br />
+    </div>
+    <br/>
+    <input type="submit" class="btn btn-success" value="Salvar" />
+</form>

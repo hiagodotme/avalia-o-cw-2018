@@ -11,6 +11,6 @@ namespace Projeto.Models
         public String Email { get; set; }
         public String Nome { get; set; }
         public String Senha { get; set; }
-        public Double Receita { get; set; }
+        public Decimal Receita { get; set; }
     }
 }

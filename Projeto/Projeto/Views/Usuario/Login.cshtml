@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<form action="/Usuario/Autenticar" method="post">
+    <input type="email" name="Email" placeholder="Email" class="form-control" required /><br/>
+    <input type="password" name="Senha" placeholder="Senha" class="form-control" required /><br/>
+    <button type="submit" class="btn btn-primary">Conectar</button>
+</form>

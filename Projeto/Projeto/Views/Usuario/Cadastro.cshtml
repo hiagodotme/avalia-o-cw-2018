@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<h2>Cadastro</h2>
+<form action="/Usuario/Cadastrar" method="post">
+    <input type="text" name="Nome" placeholder="Nome" class="form-control" required /><br/>
+    <input type="email" name="Email" placeholder="Email" class="form-control" required /><br />
+    <input type="password" name="Senha" placeholder="Senha" class="form-control" required /><br />
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>

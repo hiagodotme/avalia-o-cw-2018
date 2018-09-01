@@ -1,0 +1,24 @@
+CREATE DATABASE BDVendaDireta
+GO
+ 
+USE BDVendaDireta
+GO
+ 
+CREATE TABLE Usuario
+(
+  UsuarioId     int           primary key     identity,
+  Nome          varchar(60)   not null,
+  Email         varchar(100)  not null        unique,
+  Senha         varchar(20)   not null,
+  Receita       decimal(9,2)  not null
+)
+ 
+CREATE TABLE Produto
+(
+  ProdutoId     int           primary key     identity,
+  UsuarioId     int           not null,
+  Nome          varchar(200)  not null,
+  Preco         decimal(9,2)  not null,
+  Vendido       bit           not null,
+  foreign key (UsuarioId) references Usuario (UsuarioId)
+)

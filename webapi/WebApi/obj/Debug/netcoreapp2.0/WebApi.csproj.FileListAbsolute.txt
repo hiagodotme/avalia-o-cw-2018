@@ -1,8 +1,0 @@
-C:\Users\MAQLAB\Documents\AvaliacaoCW2018\webapi\WebApi\bin\Debug\netcoreapp2.0\WebApi.deps.json
-C:\Users\MAQLAB\Documents\AvaliacaoCW2018\webapi\WebApi\bin\Debug\netcoreapp2.0\WebApi.runtimeconfig.json
-C:\Users\MAQLAB\Documents\AvaliacaoCW2018\webapi\WebApi\bin\Debug\netcoreapp2.0\WebApi.runtimeconfig.dev.json
-C:\Users\MAQLAB\Documents\AvaliacaoCW2018\webapi\WebApi\bin\Debug\netcoreapp2.0\WebApi.dll
-C:\Users\MAQLAB\Documents\AvaliacaoCW2018\webapi\WebApi\obj\Debug\netcoreapp2.0\WebApi.csprojResolveAssemblyReference.cache
-C:\Users\MAQLAB\Documents\AvaliacaoCW2018\webapi\WebApi\obj\Debug\netcoreapp2.0\WebApi.csproj.CoreCompileInputs.cache
-C:\Users\MAQLAB\Documents\AvaliacaoCW2018\webapi\WebApi\obj\Debug\netcoreapp2.0\WebApi.AssemblyInfoInputs.cache
-C:\Users\MAQLAB\Documents\AvaliacaoCW2018\webapi\WebApi\obj\Debug\netcoreapp2.0\WebApi.AssemblyInfo.cs

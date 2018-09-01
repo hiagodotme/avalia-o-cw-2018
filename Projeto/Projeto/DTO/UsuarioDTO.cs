@@ -82,6 +82,7 @@ namespace Projeto.DTO
                     // existe usuário, não pode cadastrar.
                     throw new Exception("Já existe um usuário com o e-mail " + u.Email + " registrado.");
                 }
+                hasUser.Close();
 
                 // inserindo usuário
                 SqlCommand sc = db.GetSqlCommand();
